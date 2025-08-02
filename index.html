@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌿 Plant Mood Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAGE 1: Select Photo -->
+  <div class="container page active" id="page1">
+    <h1>🌱 Plant Mood Detector</h1>
+    <p>Select or take a picture of your plant:</p>
+
+    <!-- Custom Camera and Gallery Buttons -->
+    <label for="cameraInput" class="custom-button" id="cameraBtn">📸 Take Photo</label>
+    <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none;" />
+
+
+    <label for="galleryInput" class="custom-button">🖼 Choose from Gallery</label>
+    <input type="file" id="galleryInput" accept="image/*" />
+
+    <div id="imagePreview"></div>
+    <button id="detectBtn" onclick="detectMood()">Detect Mood 🧠</button>
+  </div>
+
+  <!-- PAGE 2: Mood Result -->
+  <div class="container page" id="page2">
+    <h1>🪴 Your Plant's Mood</h1>
+    <img id="plantImage" src="" alt="Your Plant Image" />
+    <h2 id="mood"></h2>
+    <p id="advice"></p>
+    <button onclick="goBack()">🔁 Try Another</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
